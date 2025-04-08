@@ -1,0 +1,7 @@
+name: 'Ckeditor Advanced Tables'
+type: module
+description: 'Inherits core table plugin and adds a custom properties dialog with more options'
+package: CKEditor 5
+core_version_requirement: ^11
+dependencies:
+  - drupal:ckeditor5

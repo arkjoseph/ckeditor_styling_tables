@@ -1,0 +1,15 @@
+tables:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/build/tables.js: { preprocess: false, minified: true }
+  dependencies:
+    - core/ckeditor5
+    - core/ckeditor5.table
+# Loaded in the text format configuration form to provide styling for the icon
+# used in toolbar config.
+admin.tables:
+  css:
+    theme:
+      css/tables.admin.css: { }

@@ -1,0 +1,40 @@
+ckeditor_advanced_tables_tables:
+  # Configuration that will be sent to CKEditor 5 JavaScript plugins.
+  # Core table plugins
+  ckeditor5:
+    plugins:
+      - table.PlainTableOutput
+      - table.TableToolbar
+      - table.TableCaption
+      - table.TableProperties
+      - tables.Tables
+      - tables.UsaColumn
+      - tables.UsaRow
+      - tables.TablesAdvanced
+      - tables.Deletetable
+    config:
+      table:
+        contentToolbar: [UsaRow, UsaColumn, mergeTableCells, Deletetable, toggleTableCaption, Tables, '|', TablesAdvanced ]
+  # Configuration that will be used directly by Drupal.
+  drupal:
+    label: 'Advanced Tables'
+    library: ckeditor_advanced_tables/tables
+    admin_library: ckeditor_advanced_tables/admin.tables
+    conditions:
+      plugins:
+        # When arbitrary HTML is already allowed, it's harmless to enable CKEditor 5's UI for table properties.
+        - ckeditor5_arbitraryHtmlSupport
+    toolbar_items:
+      tables:
+        label: 'Advanced Tables'
+    elements:
+      - <table class style>
+      - <tr>
+      - <td>
+      - <td rowspan colspan>
+      - <th scope>
+      - <th rowspan colspan>
+      - <thead>
+      - <tbody>
+      - <tfoot>
+      - <caption>

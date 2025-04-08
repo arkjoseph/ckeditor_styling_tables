@@ -1,0 +1,77 @@
+.ck.ck-table-advanced-form {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: var(--ck-spacing-small) !important;
+  display: grid;
+}
+.ck.ck-table-advanced-form {
+  .ck-labeled-field-view__status {
+    display: none;
+    background: #6b6b6b !important;
+    &:after {
+      border-color: transparent transparent #6b6b6b transparent !important;
+    }
+  }
+  .ck-table-form__field-row:hover .ck-labeled-field-view__status {
+      display:block;
+  }
+}
+.ck.ck-table-form .ck-table-form__field-row {
+  padding: var(--ck-spacing-small) !important;
+  display: grid;
+}
+.ck.ck-table-advanced-form .ck-table-form__field-row {
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+.ck.ck-table-form .ck-table-form__field-row {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: var(--ck-spacing-standard);
+}
+.ck.ck-table-form .ck-dropdown {
+  width: 100%;
+}
+.ck.ck-table-form .ck.ck-dropdown .ck-dropdown__arrow {
+  position: absolute;
+}
+.ck.ck-table-form .ck.ck-dropdown .ck-dropdown__button:not(:focus) {
+  border: 1px solid var(--ck-color-base-border);
+}
+.ck.ck-table-form .ck.ck-labeled-field-view {
+  padding: var(--ck-spacing-small) !important;
+}
+.ck.ck-table-form .ck-labeled-field-view.ck-table-form__style-options .ck-dropdown-selected .ck-button__label {
+  opacity: 1 !important;
+  overflow: visible;
+}
+.ck.ck-table-form .ck-labeled-field-view.ck-table-form__style-options .ck-dropdown-selected + .ck-label {
+  transform: translate(var(--ck-spacing-medium),-6px) scale(.75) !important;
+  background: white !important;
+}
+.ck.ck-table-form .ck-table-form__field-row textarea.ck-input {
+  height: 31px !important;
+}
+.ck.ck-table-form .ck-table-form__field-row .ck-switchbutton:nth-of-type(1) {
+  grid-area: 1 / 2 / 1 / 2;
+  top: -5px;
+}
+.ck.ck-table-form .ck-table-form__field-row .ck-switchbutton:nth-of-type(2) {
+  grid-area: 1 / 2 / 2 / 2;
+  top: 20px;
+}
+.ck.ck-table-form .ck-table-form__field-row .ck-switchbutton {
+  height: 30px;
+  &:hover {
+    background: var(--ck-color-list-button-hover-background) !important;
+  }
+}
+.ck-switchbutton {
+  cursor: pointer !important;
+}
+body[data-fullscreen="fullscreenoverlay"] {
+  .ck-balloon-panel_arrow_sw.ck-balloon-panel_with-arrow:not(.ck-toolbar-container),
+  .ck-balloon-panel_arrow_nw.ck-balloon-panel_with-arrow:not(.ck-toolbar-container) {
+    left: 10px !important
+  }
+}
