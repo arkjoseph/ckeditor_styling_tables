@@ -1,0 +1,19 @@
+ckeditor_advanced_tables.settings:
+  type: config_object
+  label: 'CKEditor Advanced Tables settings'
+  mapping:
+    table_styles:
+      type: sequence
+      label: 'Table styles'
+      sequence:
+        type: mapping
+        mapping:
+          id:
+            type: string
+            label: 'Style identifier'
+          classes:
+            type: string
+            label: 'CSS classes'
+          label:
+            type: string
+            label: 'Display label'
