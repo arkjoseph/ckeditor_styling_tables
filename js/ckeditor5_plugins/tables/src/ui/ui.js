@@ -11,7 +11,11 @@ import {
 } from 'ckeditor5/src/ui';
 import { Collection } from 'ckeditor5/src/utils';
 import icon from '../../../../../icons/table.svg';
-import FormView from '../view/view';
+
+// Refactored to share common code
+import MainTableFormView from '../view/view';
+import AdvancedTableFormView from '../view/advancedView';
+
 import {
   getSelectionAffectedTable,
 } from '@ckeditor/ckeditor5-table/src/utils/common';
@@ -59,7 +63,7 @@ export default class TablesUi extends Plugin {
 
   _createFormView() {
     const editor = this.editor;
-    const formView = new FormView(editor.locale);
+    const formView = new MainTableFormView(editor.locale);
 
     this.listenTo(formView, 'submit', () => {
       const value = {

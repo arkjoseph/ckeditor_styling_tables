@@ -20,6 +20,7 @@ ckeditor_advanced_tables_tables:
     label: 'Advanced Tables'
     library: ckeditor_advanced_tables/tables
     admin_library: ckeditor_advanced_tables/admin.tables
+    class: Drupal\ckeditor_advanced_tables\Plugin\CKEditor5Plugin\AdvancedTables
     conditions:
       plugins:
         # When arbitrary HTML is already allowed, it's harmless to enable CKEditor 5's UI for table properties.

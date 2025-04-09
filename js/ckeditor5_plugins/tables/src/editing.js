@@ -75,59 +75,6 @@ export default class EditingTable extends Plugin {
           }
         });
       });
-
-      /*
-      // Some tables need more html so check for that
-
-        editor.conversion.for('downcast').add(dispatcher => {
-          dispatcher.on(val, (evt, data, conversionApi) => {
-            if (data.item.name === 'table') {
-
-              if(data.item.parent && data.item.parent.name == 'htmlDiv') {
-                let tmp = data.item.parent.getAttribute('htmlDivAttributes');
-                if (tableClass.id === 'tableScrollable' || tableClass.id === 'tableCompactScrollable') {
-                 // if (!tmp.classes.includes("usa-table-container--scrollable")) {
-                    // Add class
-                    tmp.classes = ['usa-table-container--scrollable'];
-                    data.item.parent._setAttribute('htmlDivAttributes', tmp);
-                //  }
-                  evt.stop();
-                }else{
-                  // Remove class.
-                  tmp.classes = [];
-                 // data.item.parent._setAttribute('htmlDivAttributes', tmp);
-                  evt.stop();
-                }
-
-              }
-              else{
-                const viewElement = conversionApi.mapper.toViewElement(data.item);
-                const { writer, mapper } = conversionApi;
-
-                // Translate the position in the model to a position in the view.
-                const viewPosition = mapper.toViewPosition(data.range.start);
-
-                // Create a <div> element that will be inserted into the view at
-                // the `viewPosition`.
-                let div;
-                if (tableClass.id === 'tableScrollable' || tableClass.id === 'tableCompactScrollable') {
-                   div = writer.createContainerElement('div', { class: 'usa-table-container--scrollable' });
-                }else{
-                   div = writer.createContainerElement('div', {  });
-                }
-
-                // Create the <div> element that will be inserted into the div
-                writer.insert(writer.createPositionAt(div, 0), viewElement);
-
-                // Add the newly created view element to the view.
-                writer.insert(viewPosition, div);
-                evt.stop();
-              }
-            }
-          });
-        });
-
-        */
     });
   };
 

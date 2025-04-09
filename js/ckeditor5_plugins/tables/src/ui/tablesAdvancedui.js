@@ -7,11 +7,12 @@ import {
   ViewModel,
   ButtonView, createDropdown,
 } from 'ckeditor5/src/ui';
-import FormView from '../view/advancedView';
+import AdvancedTableFormView from '../view/advancedView';
 import {
   getSelectionAffectedTable,
 } from '@ckeditor/ckeditor5-table/src/utils/common';
 import { getBalloonTablePositionData } from '../utils/positionContextualBalloon';
+import MainTableFormView from "../view/view";
 
 export default class TablesAdvancedui extends Plugin {
   static get requires() {
@@ -53,7 +54,7 @@ export default class TablesAdvancedui extends Plugin {
 
   _createFormView() {
     const editor = this.editor;
-    const formView = new FormView(editor.locale);
+    const formView = new AdvancedTableFormView(editor.locale);
 
     this.listenTo(formView, 'submit', () => {
       const value = {
